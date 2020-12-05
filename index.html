@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Family Photo Book
+        </title>
+        <link rel ="stylesheet" href = "style.css">
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <img id="Photo" src="
+        https://tse2.mm.bing.net/th?id=OIP.zRzvLJjCUUx3z7Sk_tAtIwAAAA&pid=Api&P=0&w=217&h=173">
+        <div>
+            <p id="Name"></p>
+        </div>
+        <div>
+            <button type="button" onclick="nextanimation()">
+            Next 
+            </button>
+        </div>
+        <script>
+            var images = ["https://mediasvc.ancestry.com/v2/image/namespaces/1093/media/f99b96cc-754a-4ba7-8d19-5aecb8fbd5ce.jpg?client=trees-mediaservice&imageQuality=hq&maxWidth=1898.75&maxHeight=990",
+            "https://mediasvc.ancestry.com/v2/image/namespaces/1093/media/6009ab68-2183-4a24-85fd-919701f17fa1.jpg?client=trees-mediaservice&imageQuality=hq&maxWidth=1898.75&maxHeight=990",
+            "https://mediasvc.ancestry.com/v2/image/namespaces/1093/media/d0ba9ee3-48c5-40cb-8280-f7f67245c8cd.jpg?client=trees-mediaservice&imageQuality=hq&maxWidth=1898.75&maxHeight=990"];
+            var names = ["Larry Henry","Rick Henry","Lori Henry"];
+            var i = 0
+            function nextanimation(){
+                document.getElementById("Photo").src = images[i];              
+
+                document.getElementById("Name").innerHTML = names[i];
+                i = i + 1;
+            
+                if (i == 3){
+                    i = 0;
+                }
+                
+            }    
+
+        </script>
+    </body>
+</html>
